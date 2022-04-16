@@ -1,0 +1,22 @@
+This is a reference sheet for creation of emotes, please use one of the already existing emotes as a template when using this sheet as it is not complete with instructions on how to create an entire emote.
+
+name - The name of the emote, used when generating help list.
+command - The command of the emote, automatically generated into the command map
+description - A short description of the emote, used when generating help list
+usage - Usage of the command, "<arg>" should be used for required arguments while "[arg]" should be used for optional ones.
+author - Author of the emote
+
+lines - List of all possible lines which to send in chat, must match the variable names described in the variables list.
+variables - List of all variables used in lines, must match the variable names used in the lines list.
+USER - Name of the user of the command.
+ARGUMENT_0 - First argument in command.
+ARGUMENT_1 - Second argument in command.
+ARGUMENT_2 - Third argument in command.
+ARGUMENT_3 - Fourth argument in command.
+ARGUMENT_4 - Fifth argument in command.
+ARGUMENT_5 - Sixth argument in command.
+ARGUMENT_6 - Seventh argument in command.
+ARGUMENT_7 - Eighth argument in command.
+ARGUMENT_8 - Ninth argument in command.
+ARGUMENT_9 - Tenth argument in command.
+REST - All arguments following the last ARGUMENT_0-9 used in command.

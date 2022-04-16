@@ -1,0 +1,19 @@
+{
+  "name": "Smile",
+  "command": "smile",
+  "description": "Smiles!",
+  "usage": "/smile [player]",
+  "author": "Mafrans",
+  "lines": {
+    "USER": [
+      "&c%user%&b is smiling!"
+    ],
+    "USER,ARGUMENT_0": [
+      "&c%user%&b gives &c%target%&b a nice big smile."
+    ]
+  },
+  "variables": {
+    "USER": "user",
+    "ARGUMENT_0": "target"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Thumbsup",
+  "command": "thumbsup",
+  "description": "Give someone a thumbs up.",
+  "usage": "/thumbsup [player] [message]",
+  "author": "Mafrans",
+  "lines": {
+    "USER": [
+      "&c%user%&b gives a thumbs up!"
+    ],
+    "USER,ARGUMENT_0": [
+      "&c%user%&b gives a big thumbs up to &c%target%&b!"
+    ]
+  },
+  "variables": {
+    "USER": "user",
+    "ARGUMENT_0": "target"
+  }
+}

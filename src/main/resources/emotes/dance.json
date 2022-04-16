@@ -1,0 +1,24 @@
+{
+  "name": "Dance",
+  "command": "dance",
+  "description": "Dance with one or more people!",
+  "usage": "/dance [player] [player2]",
+  "author": "Mafrans",
+  "lines": {
+    "USER": [
+      "&c%user%&b spins around!"
+    ],
+    "USER,ARGUMENT_0": [
+      "&c%user%&b takes &c%target%&b up for a waltz!",
+      "&bHow classy!"
+    ],
+    "USER,ARGUMENT_0,ARGUMENT_1": [
+      "&c%user%&b, &c%target%&b and &c%other_target%&b dance together as a trio!"
+    ]
+  },
+  "variables": {
+    "USER": "user",
+    "ARGUMENT_0": "target",
+    "ARGUMENT_1": "other_target"
+  }
+}

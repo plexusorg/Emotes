@@ -1,0 +1,19 @@
+{
+  "name": "Hug",
+  "command": "hug",
+  "description": "Hug someone <3",
+  "usage": "/hug [player]",
+  "author": "Mafrans",
+  "lines": {
+    "USER": [
+      "&c%user%&b looks like they really need a hug."
+    ],
+    "USER,ARGUMENT_0": [
+      "&c%user%&b hugs &c%target%&b &d<3"
+    ]
+  },
+  "variables": {
+    "USER": "user",
+    "ARGUMENT_0": "target"
+  }
+}

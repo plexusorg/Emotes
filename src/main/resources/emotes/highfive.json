@@ -1,0 +1,21 @@
+{
+  "name": "Highfive",
+  "command": "highfive",
+  "description": "Gives someone a high five!",
+  "usage": "/highfive [player]",
+  "author": "Mafrans",
+  "lines": {
+    "USER": [
+      "&c%user%&b raises their palm for a high five",
+      "&bbut there was noone to answer."
+    ],
+    "USER,ARGUMENT_0": [
+      "&c%user%&b gives a high five to &c%target%&b!",
+      "&bGood job &c%user%&b!"
+    ]
+  },
+  "variables": {
+    "USER": "user",
+    "ARGUMENT_0": "target"
+  }
+}

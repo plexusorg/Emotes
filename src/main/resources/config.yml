@@ -1,0 +1,6 @@
+# Configuration file for EmotesTF
+debug: false # Show or hide debug messages (Default: false)
+
+emotes:
+  cooldown: 5 # Emote cooldown time in seconds. (Default: 20 seconds)
+  cooldown-message: 'Your emotes are on cooldown. (%cooldown% seconds)' # This message is sent when an emote is used while on cooldown. (Default: 'Your emotes are on cooldown. (%cooldown% seconds)')

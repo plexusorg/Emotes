@@ -1,0 +1,23 @@
+{
+  "name": "Greet",
+  "command": "greet",
+  "description": "Greets a user.",
+  "usage": "/greet [player] [message]",
+  "author": "Mafrans",
+  "lines": {
+    "USER": [
+      "&c%user%&b says hello."
+    ],
+    "USER,ARGUMENT_0": [
+      "&c%user%&b greets &c%target%&b."
+    ],
+    "USER,ARGUMENT_0,REST": [
+      "&c%user%&b greets &c%target%&b by saying '%greet_message%'."
+    ]
+  },
+  "variables": {
+    "USER": "user",
+    "ARGUMENT_0": "target",
+    "REST": "greet_message"
+  }
+}
