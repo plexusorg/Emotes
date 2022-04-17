@@ -67,7 +67,7 @@ public class EmoteLoader
                 emoteMeta.setDescription(json.getString("description"));
                 emoteMeta.setAuthor(json.getString("author"));
                 emoteMeta.setUsage(json.getString("usage"));
-                HashMap<List<EmoteVariable>, String[]> lines = (HashMap)new HashMap<>();
+                HashMap<List<EmoteVariable>, String[]> lines = new HashMap<>();
                 JSONObject jsonLines = json.getJSONObject("lines");
                 for (String key : jsonLines.keySet())
                 {

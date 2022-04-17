@@ -4,7 +4,6 @@ import dev.plex.emotes.EmotesBase;
 import dev.plex.emotes.util.EmoteLoader;
 import dev.plex.emotes.util.EmoteMeta;
 import dev.plex.emotes.util.MessageUtils;
-import dev.plex.rank.enums.Rank;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,17 +75,28 @@ public class Command_emotes implements CommandExecutor, EmotesBase
             {
                 sender.sendMessage(ChatColor.GREEN + "Reloading Emotes!");
                 plugin.reloadConfig();
+                plugin.loadCommands();
+                return true;
             }
-            else if (Bukkit.getServer().getPluginManager().isPluginEnabled("Plex") && plugin.plexBridge.checkRank(sender, Rank.ADMIN, "plex.emotes.reload"))
+            else if (Bukkit.getServer().getPluginManager().isPluginEnabled("Plex") && plugin.plexBridge.checkRank(sender, "ADMIN", "plex.emotes.reload"))
             {
                 sender.sendMessage(ChatColor.GREEN + "Reloading Emotes!");
                 plugin.reloadConfig();
+                plugin.loadCommands();
+                return true;
+            }
+            else if (sender.hasPermission("emotes.reload"))
+            {
+                sender.sendMessage(ChatColor.GREEN + "Reloading Emotes!");
+                plugin.reloadConfig();
+                plugin.loadCommands();
+                return true;
             }
             else
             {
                 sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                return true;
             }
-            return true;
         }
         return false;
     }

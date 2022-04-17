@@ -31,7 +31,7 @@ public class Emotes extends JavaPlugin
         if (!getServer().getPluginManager().isPluginEnabled("TotalFreedomMod")
                 && !getServer().getPluginManager().isPluginEnabled("Plex"))
         {
-            getLogger().log(Level.WARNING, "Plex nor TotalFreedomMod was found. Defaulting to if the player is op for permissions");
+            getLogger().log(Level.WARNING, "Plex nor TotalFreedomMod was found, using permissions.");
         }
         this.tfmBridge = new TFMBridge();
         tfmBridge.getTFM();
@@ -39,6 +39,16 @@ public class Emotes extends JavaPlugin
         plexBridge.getPlex();
         this.cooldownTask = new CooldownTask();
         this.cooldownTask.runTaskTimerAsynchronously(plugin, 0L, 20L);
+        loadCommands();
+    }
+
+    public void onDisable()
+    {
+        this.cooldownTask.cancel();
+    }
+
+    public void loadCommands()
+    {
         try
         {
             EmoteLoader.registerDefaultEmote("greet");
@@ -57,10 +67,5 @@ public class Emotes extends JavaPlugin
         {
             e.printStackTrace();
         }
-    }
-
-    public void onDisable()
-    {
-        this.cooldownTask.cancel();
     }
 }

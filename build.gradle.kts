@@ -13,17 +13,12 @@ repositories {
     maven {
         url = uri("https://papermc.io/repo/repository/maven-public/")
     }
-
-    maven {
-        url = uri("https://nexus.telesphoreo.me/repository/plex/")
-    }
 }
 
 dependencies {
     implementation("org.projectlombok:lombok:1.18.22")
     annotationProcessor("org.projectlombok:lombok:1.18.22")
     implementation("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
-    implementation("dev.plex:Plex:1.0.2-SNAPSHOT")
     library("org.json:json:20220320")
     library("commons-io:commons-io:2.11.0")
 }
