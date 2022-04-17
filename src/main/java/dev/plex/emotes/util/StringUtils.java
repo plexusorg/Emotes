@@ -1,7 +1,7 @@
 package dev.plex.emotes.util;
 
-
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,7 +38,7 @@ public class StringUtils extends org.apache.commons.lang.StringUtils
         StringBuilder outBuilder = new StringBuilder();
         String toSplit = in.replaceAll(pattern, "%%spl");
         String[] split = toSplit.split("%%spl");
-        ArrayList<String> matches = new ArrayList<>();
+        List<String> matches = new ArrayList<>();
         Matcher m = Pattern.compile(pattern).matcher(in);
         while (m.find())
         {
@@ -47,7 +47,7 @@ public class StringUtils extends org.apache.commons.lang.StringUtils
         for (int i = 0; i < split.length - ((split.length > matches.size()) ? 1 : 0); i++)
         {
             outBuilder.append(split[i]);
-            String randoms = ((String)matches.get(i)).substring(1, ((String)matches.get(i)).length() - 1);
+            String randoms = matches.get(i).substring(1, matches.get(i).length() - 1);
             String[] splitRandoms = randoms.split("\\|");
             Random rand = new Random();
             outBuilder.append(splitRandoms[rand.nextInt(splitRandoms.length - 1)]);

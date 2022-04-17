@@ -34,9 +34,9 @@ public class EmoteMeta
     {
     }
 
-    public String getDescription()
+    public void setUsage(String usage)
     {
-        return this.description;
+        this.usage = usage;
     }
 
     public void setDescription(String description)
@@ -44,19 +44,9 @@ public class EmoteMeta
         this.description = description;
     }
 
-    public String getUsage()
+    public void setCommand(String command)
     {
-        return this.usage;
-    }
-
-    public void setUsage(String usage)
-    {
-        this.usage = usage;
-    }
-
-    public String getName()
-    {
-        return this.name;
+        this.command = command;
     }
 
     public void setName(String name)
@@ -64,29 +54,14 @@ public class EmoteMeta
         this.name = name;
     }
 
-    public String getAuthor()
-    {
-        return this.author;
-    }
-
     public void setAuthor(String author)
     {
         this.author = author;
     }
 
-    public String getCommand()
+    public void setLineMap(HashMap<List<EmoteVariable>, String[]> lineMap)
     {
-        return this.command;
-    }
-
-    public void setCommand(String command)
-    {
-        this.command = command;
-    }
-
-    public HashMap<EmoteVariable, String> getVariableMap()
-    {
-        return this.variableMap;
+        this.lineMap = lineMap;
     }
 
     public void setVariableMap(HashMap<EmoteVariable, String> variableMap)
@@ -94,13 +69,38 @@ public class EmoteMeta
         this.variableMap = variableMap;
     }
 
+    public String getDescription()
+    {
+        return this.description;
+    }
+
+    public String getUsage()
+    {
+        return this.usage;
+    }
+
+    public String getName()
+    {
+        return this.name;
+    }
+
+    public String getAuthor()
+    {
+        return this.author;
+    }
+
+    public String getCommand()
+    {
+        return this.command;
+    }
+
+    public HashMap<EmoteVariable, String> getVariableMap()
+    {
+        return this.variableMap;
+    }
+
     public HashMap<List<EmoteVariable>, String[]> getLineMap()
     {
         return this.lineMap;
-    }
-
-    public void setLineMap(HashMap<List<EmoteVariable>, String[]> lineMap)
-    {
-        this.lineMap = lineMap;
     }
 }
